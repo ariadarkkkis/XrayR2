@@ -1,0 +1,13 @@
+{
+    "subjectSelector": [
+      "inbound_tag1",
+      "inbound_tag2"
+    ],
+    "pingConfig": {
+      "destination": "https://www.google.com/gen_204",
+      "interval": "30m",
+      "connectivity": "http://connectivitycheck.platform.hicloud.com/generate_204",
+      "timeout": "10s",
+      "sampling": 2
+    }
+  }

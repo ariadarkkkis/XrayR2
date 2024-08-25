@@ -1,0 +1,9 @@
+{
+    "subjectSelector": [
+      "inbound_tag1",
+      "inbound_tag2"
+    ],
+    "probeURL": "https://www.google.com/gen_204",
+    "probeInterval": "10m",
+    "enableConcurrency": true
+}
