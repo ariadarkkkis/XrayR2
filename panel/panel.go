@@ -100,7 +100,7 @@ func (p *Panel) loadCore(panelConfig *Config) *core.Instance {
 		if data, err := os.ReadFile(panelConfig.ObservatoryConfigPath); err != nil {
 			log.Panicf("Failed to read Observatory config file at: %s", panelConfig.ObservatoryConfigPath)
 		} else {
-			if err = json.Unmarshal(data, ObservatoryConfigPath); err != nil {
+			if err = json.Unmarshal(data, coreObservatoryConfig); err != nil {
 				log.Panicf("Failed to unmarshal Observatory config: %s", panelConfig.ObservatoryConfigPath)
 			}
 		}
@@ -116,7 +116,7 @@ func (p *Panel) loadCore(panelConfig *Config) *core.Instance {
 		if data, err := os.ReadFile(panelConfig.BurstObservatoryConfigPath); err != nil {
 			log.Panicf("Failed to read BurstObservatory config file at: %s", panelConfig.BurstObservatoryConfigPath)
 		} else {
-			if err = json.Unmarshal(data, BurstObservatoryConfigPath); err != nil {
+			if err = json.Unmarshal(data, coreBurstObservatoryConfig); err != nil {
 				log.Panicf("Failed to unmarshal BurstObservatory config: %s", panelConfig.BurstObservatoryConfigPath)
 			}
 		}
